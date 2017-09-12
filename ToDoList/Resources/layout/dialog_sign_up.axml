@@ -80,7 +80,7 @@
             android:text="Sign Up!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnDialogEmail"
+            android:id="@+id/btnSignUp"
             android:textSize="20dp"
             android:textColor="#fff"
             android:textStyle="bold"

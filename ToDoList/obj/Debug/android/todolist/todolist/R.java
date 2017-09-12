@@ -21,10 +21,9 @@ public final class R {
         public static final int progressbarstyle=0x7f020003;
     }
     public static final class id {
-        public static final int btnDialogEmail=0x7f070005;
         public static final int btnSignIn=0x7f070007;
-        public static final int btnSignUp=0x7f070009;
-        public static final int progressBar1=0x7f07000a;
+        public static final int btnSignUp=0x7f070005;
+        public static final int progressBar1=0x7f070009;
         public static final int txtCreateAccount=0x7f070006;
         public static final int txtEmail=0x7f070003;
         public static final int txtFirstName=0x7f070000;

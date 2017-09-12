@@ -8,6 +8,7 @@ namespace ToDoList
     [Activity(Label = "ToDoList", MainLauncher = true)]
     public class MainActivity : Activity
     {
+        public static string URL_CONSTANT = "http://192.168.1.14:8080";
         private Button mBtnSignUp;
 
         protected override void OnCreate(Bundle savedInstanceState)
