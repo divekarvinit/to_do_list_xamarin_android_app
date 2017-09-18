@@ -21,14 +21,16 @@ public final class R {
         public static final int progressbarstyle=0x7f020003;
     }
     public static final class id {
-        public static final int btnSignIn=0x7f070007;
-        public static final int btnSignUp=0x7f070005;
-        public static final int progressBar1=0x7f070009;
-        public static final int txtCreateAccount=0x7f070006;
+        public static final int btnSignIn=0x7f070009;
+        public static final int btnSignUp=0x7f070006;
+        public static final int progressBar1=0x7f07000b;
+        public static final int progressBarInSignUpDialog=0x7f070007;
+        public static final int txtConfirmPassword=0x7f070005;
+        public static final int txtCreateAccount=0x7f070008;
         public static final int txtEmail=0x7f070003;
         public static final int txtFirstName=0x7f070000;
         public static final int txtLastName=0x7f070001;
-        public static final int txtOr=0x7f070008;
+        public static final int txtOr=0x7f07000a;
         public static final int txtPassword=0x7f070004;
         public static final int txtUserName=0x7f070002;
     }

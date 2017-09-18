@@ -12,7 +12,9 @@ using Android.Widget;
 using System.Net;
 using System.IO;
 using System.Json;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace ToDoList
 {
@@ -23,6 +25,7 @@ namespace ToDoList
         private EditText mTxtUserName;
         private EditText mTxtEmail;
         private EditText mTxtPassword;
+        private EditText mTxtConfirmPassword;
         private Button mBtnSignUp;
         private ProgressBar mProgressBar;
 
@@ -32,28 +35,62 @@ namespace ToDoList
             base.OnCreateView(inflater, container, savedInstanceState);
 
             var view = inflater.Inflate(Resource.Layout.dialog_sign_up, container, false);
+            try
+            {
 
-            mTxtFirstName = view.FindViewById<EditText>(Resource.Id.txtFirstName);
-            mTxtLastName = view.FindViewById<EditText>(Resource.Id.txtLastName);
-            mTxtUserName = view.FindViewById<EditText>(Resource.Id.txtUserName);
-            mTxtEmail = view.FindViewById<EditText>(Resource.Id.txtEmail);
-            mTxtPassword = view.FindViewById<EditText>(Resource.Id.txtPassword);
-            mBtnSignUp = view.FindViewById<Button>(Resource.Id.btnSignUp);
-            mProgressBar = view.FindViewById<ProgressBar>(Resource.Id.progressBar1);
 
-            mBtnSignUp.Click += async (sender, e) => {
+                mTxtFirstName = view.FindViewById<EditText>(Resource.Id.txtFirstName);
+                mTxtLastName = view.FindViewById<EditText>(Resource.Id.txtLastName);
+                mTxtUserName = view.FindViewById<EditText>(Resource.Id.txtUserName);
+                mTxtEmail = view.FindViewById<EditText>(Resource.Id.txtEmail);
+                mTxtPassword = view.FindViewById<EditText>(Resource.Id.txtPassword);
+                mBtnSignUp = view.FindViewById<Button>(Resource.Id.btnSignUp);
+                mProgressBar = view.FindViewById<ProgressBar>(Resource.Id.progressBarInSignUpDialog);
+                mTxtConfirmPassword = view.FindViewById<EditText>(Resource.Id.txtConfirmPassword);
 
-                // Get the latitude and longitude entered by the user and create a query.
-                string url = MainActivity.URL_CONSTANT + "/getLogin";
+                mBtnSignUp.Click += async (sender, e) =>
+                {
+                    var validation = false;
+                    if (mTxtFirstName.Text == null || mTxtFirstName.Text == "" ||
+                        mTxtLastName.Text == null || mTxtLastName.Text == "" ||
+                        mTxtUserName.Text == null || mTxtUserName.Text == "" ||
+                        mTxtEmail.Text == null || mTxtEmail.Text == "" ||
+                        mTxtPassword.Text == null || mTxtPassword.Text == "" ||
+                        mTxtConfirmPassword.Text == null || mTxtConfirmPassword.Text == "")
+                    {
+                        Toast.MakeText(Activity, "Please enter all the fields", ToastLength.Long).Show();
+                    }
+                    else if (mTxtPassword.Text != mTxtConfirmPassword.Text)
+                    {
+                        mTxtConfirmPassword.Error = "Passwords Do Not Match";
+                    }
+                    else
+                    {
+                        validation = true;
+                    }
+                    // Get the latitude and longitude entered by the user and create a query.
+                    string url = MainActivity.URL_CONSTANT + "/registerUser";
+                    dynamic formData = new JObject();
+                    formData.firstName = mTxtFirstName.Text;
+                    formData.lastName = mTxtLastName.Text;
+                    formData.userName = mTxtUserName.Text;
+                    formData.emailId = mTxtEmail.Text;
+                    formData.password = mTxtPassword.Text;
 
-                // Fetch the weather information asynchronously, 
-                // parse the results, then update the screen:
-                mProgressBar.Visibility = ViewStates.Visible;
-                JsonValue json = await RegisterUser(url);
-                mProgressBar.Visibility = ViewStates.Invisible;
-                // ParseAndDisplay (json);
-            };
+                    // parse the results, then update the screen:
+                    if (validation)
+                    {
+                        mProgressBar.Visibility = ViewStates.Visible;
+                        JsonValue json = await RegisterUser(url, formData.ToString());
+                        mProgressBar.Visibility = ViewStates.Invisible;
+                        // ParseAndDisplay (json);
+                    }
 
+                };
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.ToString());
+            }
             return view;
         }
 
@@ -61,27 +98,32 @@ namespace ToDoList
 
         }
 
-        private async Task<JsonValue> RegisterUser(string url) {
+        private async Task<JsonValue> RegisterUser(string url, string data)
+        {
             JsonValue jsonDoc = null;
             try
             {
+                HttpClient client = new HttpClient();
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(url, content);
 
-                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
-                request.ContentType = "application/json";
-                request.Method = "GET";
+                var responseStream = await response.Content.ReadAsStreamAsync();
+                jsonDoc = await Task.Run(() => JsonObject.Load(responseStream));
 
-                using (WebResponse response = await request.GetResponseAsync())
+                if (jsonDoc["success"]== "N")
                 {
-                    // Get a stream representation of the HTTP web response:
-                    using (Stream stream = response.GetResponseStream())
+                    if (jsonDoc["fieldName"] == "userName")
                     {
-                        // Use this stream to build a JSON document object:
-                        jsonDoc = await Task.Run(() => JsonObject.Load(stream));
-                        Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+                        mTxtUserName.Error = jsonDoc["message"];
+                    }
+                    else if (jsonDoc["fieldName"] == "emailId")
+                    {
+                        mTxtEmail.Error = jsonDoc["message"];
                     }
                 }
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 Console.WriteLine(e.ToString());
             }
 

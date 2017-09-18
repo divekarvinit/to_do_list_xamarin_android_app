@@ -19,8 +19,8 @@
         android:paddingLeft="10dp"
         android:textColor="#000" />
     <EditText
-        android:layout_below="@id/txtFirstName"
         android:id="@+id/txtLastName"
+        android:layout_below="@id/txtFirstName"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:background="@drawable/edit_text_style"
@@ -32,8 +32,8 @@
         android:paddingLeft="10dp"
         android:textColor="#000" />
     <EditText
-        android:layout_below="@id/txtLastName"
         android:id="@+id/txtUserName"
+        android:layout_below="@id/txtLastName"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:background="@drawable/edit_text_style"
@@ -45,11 +45,11 @@
         android:paddingLeft="10dp"
         android:textColor="#000" />
     <EditText
+        android:id="@+id/txtEmail"
         android:layout_below="@id/txtUserName"
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:id="@+id/txtEmail"
         android:background="@drawable/edit_text_style"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
@@ -59,11 +59,12 @@
         android:paddingLeft="10dp"
         android:textColor="#000" />
     <EditText
+        android:id="@+id/txtPassword"
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:id="@+id/txtPassword"
         android:background="@drawable/edit_text_style"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Password"
@@ -71,6 +72,19 @@
         android:paddingLeft="10dp"
         android:textColor="#000"
         android:layout_below="@id/txtEmail" />
+    <EditText
+        android:id="@+id/txtConfirmPassword"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/edit_text_style"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Confirm Password"
+        android:textColorHint="#808080"
+        android:paddingLeft="10dp"
+        android:textColor="#000"
+        android:layout_below="@id/txtPassword" />
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,5 +106,13 @@
             android:background="@drawable/ButtonSignUpStyle"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarInSignUpDialog"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/progressbarstyle"
+            android:visibility="invisible" />
     </RelativeLayout>
 </RelativeLayout>

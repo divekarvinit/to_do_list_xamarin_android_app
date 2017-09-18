@@ -11,9 +11,6 @@ c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debu
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\R.cs.flag
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\uploadflags.txt
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\drawable\buttonsigninstyle.xml
-c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\ToDoList.dll.mdb
-c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\android\assets\ToDoList.dll.mdb
-c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\ToDoList.csprojResolveAssemblyReference.cache
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\drawable\buttonsignupstyle.xml
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\drawable\progressbarstyle.xml
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\layout\dialog_sign_up.xml
@@ -21,3 +18,11 @@ c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debu
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\anim\slide_up.xml
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\anim\slide_right.xml
 c:\users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\values\styles.xml
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\FormsViewGroup.dll
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\FormsViewGroup.pdb
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\FormsViewGroup.dll.mdb
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\ToDoList.dll.mdb
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\android\assets\FormsViewGroup.dll.mdb
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\android\assets\ToDoList.dll.mdb
