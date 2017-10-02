@@ -110,7 +110,7 @@ namespace ToDoList
                 var responseStream = await response.Content.ReadAsStreamAsync();
                 jsonDoc = await Task.Run(() => JsonObject.Load(responseStream));
 
-                if (jsonDoc["success"]== "N")
+                if (jsonDoc["success"] == "N")
                 {
                     if (jsonDoc["fieldName"] == "userName")
                     {
@@ -120,6 +120,11 @@ namespace ToDoList
                     {
                         mTxtEmail.Error = jsonDoc["message"];
                     }
+                }
+
+                else if (jsonDoc["success"] == "Y") {
+                    Intent intentOfNextActivity = new Intent(this.Activity, typeof(UserToDoListActivity));
+                    StartActivity(intentOfNextActivity);
                 }
             }
             catch (Exception e)

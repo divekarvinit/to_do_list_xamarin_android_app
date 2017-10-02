@@ -100,6 +100,9 @@ namespace ToDoList
 			// aapt resource value: 0x7f070007
 			public const int progressBarInSignUpDialog = 2131165191;
 			
+			// aapt resource value: 0x7f07000c
+			public const int testTextView1 = 2131165196;
+			
 			// aapt resource value: 0x7f070005
 			public const int txtConfirmPassword = 2131165189;
 			
@@ -142,6 +145,9 @@ namespace ToDoList
 			
 			// aapt resource value: 0x7f030001
 			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int UserToDoList = 2130903042;
 			
 			static Layout()
 			{

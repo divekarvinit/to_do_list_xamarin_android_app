@@ -26,3 +26,5 @@ C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debu
 C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\bin\Debug\ToDoList.dll.mdb
 C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\android\assets\FormsViewGroup.dll.mdb
 C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\android\assets\ToDoList.dll.mdb
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\ToDoList.csprojResolveAssemblyReference.cache
+C:\Users\hemant\documents\visual studio 2017\Projects\ToDoList\ToDoList\obj\Debug\res\layout\usertodolist.xml

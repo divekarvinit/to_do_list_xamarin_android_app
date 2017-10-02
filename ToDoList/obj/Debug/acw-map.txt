@@ -6,3 +6,7 @@ ToDoList.SignupDialog, ToDoList;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.SignupDialog
 ToDoList.SignupDialog, ToDoList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.SignupDialog
 ToDoList.SignupDialog;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.SignupDialog
 todolist.SignupDialog;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.SignupDialog
+ToDoList.UserToDoListActivity, ToDoList;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.UserToDoListActivity
+ToDoList.UserToDoListActivity, ToDoList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.UserToDoListActivity
+ToDoList.UserToDoListActivity;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.UserToDoListActivity
+todolist.UserToDoListActivity;md5f8e7624ffb19f8d5dd0e8af7539c0e6a.UserToDoListActivity

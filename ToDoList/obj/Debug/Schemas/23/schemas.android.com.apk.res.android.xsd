@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>19/09/2017 2:13:37 AM</xs:documentation>
+    <xs:documentation>2/10/2017 11:14:00 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16841,9 +16841,9 @@
             <xs:enumeration value="@+id/checkBox1" />
             <xs:enumeration value="@id/btnSignIn" />
             <xs:enumeration value="@id/btnSignUp" />
-            <xs:enumeration value="@id/prevActivityTxt" />
             <xs:enumeration value="@id/progressBar1" />
             <xs:enumeration value="@id/progressBarInSignUpDialog" />
+            <xs:enumeration value="@id/testTextView1" />
             <xs:enumeration value="@id/txtConfirmPassword" />
             <xs:enumeration value="@id/txtCreateAccount" />
             <xs:enumeration value="@id/txtEmail" />

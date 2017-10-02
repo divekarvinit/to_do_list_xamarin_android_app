@@ -25,6 +25,7 @@ public final class R {
         public static final int btnSignUp=0x7f070006;
         public static final int progressBar1=0x7f07000b;
         public static final int progressBarInSignUpDialog=0x7f070007;
+        public static final int testTextView1=0x7f07000c;
         public static final int txtConfirmPassword=0x7f070005;
         public static final int txtCreateAccount=0x7f070008;
         public static final int txtEmail=0x7f070003;
@@ -37,6 +38,7 @@ public final class R {
     public static final class layout {
         public static final int dialog_sign_up=0x7f030000;
         public static final int main=0x7f030001;
+        public static final int usertodolist=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
