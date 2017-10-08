@@ -16,6 +16,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
+/* LOG IN DIALOG by Vinit Divekar- 17960822 STARTS*/
 namespace ToDoList
 {
     public class LogInDialog : DialogFragment
@@ -94,7 +95,7 @@ namespace ToDoList
 
                 else if (jsonDoc["success"] == "Y")
                 {
-                    Intent intentOfNextActivity = new Intent(this.Activity, typeof(UserToDoListActivity));
+                    Intent intentOfNextActivity = new Intent(this.Activity, typeof(CreateList));
                     StartActivity(intentOfNextActivity);
                 }
             }
@@ -114,3 +115,5 @@ namespace ToDoList
         }
     }
 }
+
+/* LOG IN DIALOG by Vinit Divekar- 17960822 ENDS*/

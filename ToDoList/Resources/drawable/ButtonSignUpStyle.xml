@@ -1,4 +1,5 @@
-﻿<selector xmlns:android="http://schemas.android.com/apk/res/android">
+﻿<!-- Sign In Button Style by VINIT DIVEKAR- 17960822 STARTS-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
   <item android:state_pressed ="false">
     <layer-list>
@@ -42,3 +43,5 @@
   </item>
 
 </selector>
+
+<!-- Sign In Button Style by VINIT DIVEKAR- 17960822 ENDS-->

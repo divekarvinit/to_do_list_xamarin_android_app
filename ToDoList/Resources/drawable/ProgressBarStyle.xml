@@ -1,4 +1,6 @@
-﻿<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+﻿<!-- Progress Bar Style by VINIT DIVEKAR- 17960822 STARTS-->
+
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
 android:pivotX="50%" android:pivotY="50%" android:fromDegrees="0"
 android:toDegrees="360">
   
@@ -12,3 +14,5 @@ android:toDegrees="360">
               android:angle="0"/>
   </shape>
 </rotate>
+
+<!-- Progress Bar Style by VINIT DIVEKAR- 17960822 ENDS-->

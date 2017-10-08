@@ -1,4 +1,6 @@
-﻿<selector xmlns:android="http://schemas.android.com/apk/res/android">
+﻿<!-- Edit Text Style by VINIT DIVEKAR- 17960822 STARTS-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
   <item android:state_focused="true">
 
@@ -49,3 +51,4 @@
   </item>
 
 </selector>
+<!-- Edit Text Style by VINIT DIVEKAR- 17960822 ENDS-->

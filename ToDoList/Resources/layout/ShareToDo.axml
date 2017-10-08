@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+    <TextView
+        android:text="Share To-Do list with Friends"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtlable"
+        android:layout_marginTop="10.0dp"
+        android:layout_marginBottom="6.0dp"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:textColor="@android:color/holo_blue_dark" />
+    <TextView
+        android:text="Select To-Do List"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtlist"
+        android:layout_marginBottom="6.0dp"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:textColor="@android:color/background_dark" />
+    <EditText
+        android:id="@+id/searchlist"
+        android:layout_marginRight="10.0dp"
+        android:hint="Enter List name here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dp"
+        android:layout_marginEnd="20dip"
+        android:layout_marginBottom="14.0dip"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_marginLeft="10.0dp" />
+    <TextView
+        android:text="Select Friend"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtfrnd"
+        android:layout_marginTop="20.0dp"
+        android:layout_marginBottom="6.0dp"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:textColor="@android:color/background_dark" />
+    <EditText
+        android:id="@+id/searchfrnd"
+        android:layout_marginRight="10.0dp"
+        android:hint="Enter Friend name here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dp"
+        android:layout_marginEnd="20dip"
+        android:layout_marginBottom="14.0dip"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_marginLeft="10.0dp" />
+    <Button
+        android:text="Share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnshare"
+        android:layout_marginTop="20.0dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:gravity="center"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shareprogress"
+        android:layout_marginTop="20.0dp" />
+</LinearLayout>

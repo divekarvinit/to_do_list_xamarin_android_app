@@ -16,6 +16,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
+/* SIGN UP DIALOG by Vinit Divekar- 17960822 STARTS*/
 namespace ToDoList
 {
     class SignupDialog : DialogFragment
@@ -123,7 +124,7 @@ namespace ToDoList
                 }
 
                 else if (jsonDoc["success"] == "Y") {
-                    Intent intentOfNextActivity = new Intent(this.Activity, typeof(UserToDoListActivity));
+                    Intent intentOfNextActivity = new Intent(this.Activity, typeof(CreateList));
                     StartActivity(intentOfNextActivity);
                 }
             }
@@ -143,3 +144,5 @@ namespace ToDoList
         }
     }
 }
+
+/* SIGN UP DIALOG by Vinit Divekar- 17960822 ENDS*/
